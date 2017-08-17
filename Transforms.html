@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Transforms</title>
+        <link rel="stylesheet" href="transforms.css">
+        <style type="text/css">
+           body {
+               background-color: lightblue;
+           }
+           .boxes {
+               height: 100px;
+               width: 300px;
+               border: black solid 2px;
+               margin: 5px auto 5px auto;
+               text-align: center;
+               border-radius: 10px;
+           }
+           #translate {
+               transform: translate(-45%);
+               position: relative;
+           }
+           #rotate {
+               transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg) perspective(1000px);
+               position: relative;
+               top: 100px;
+
+           }
+           #scaled {
+               position: relative;
+               top: 150px;
+               transform: scale(2, 1);
+               font-size: 20px;
+           }
+           #skewed {
+               position: relative;
+               top: 150px;
+               transform: skew(20deg) rotate(20deg);
+           }
+           #box:hover {
+               height: 150px;
+               width: 300px;
+               background-color: red;
+               transition: width 5s, height 5s, background-color 5s;
+           }
+           #translate:hover {
+               background-color: red;
+               transition: background-color 5s, ease-in-out;
+           }
+           #rotate:hover {
+               transform: rotate(100deg);
+               background-color: red;
+               transition: 5s; 
+           }
+           #scaled:hover {
+               background-color: red;
+               transform: scale(2.5, 1.5);
+               transition-duration: 5s, 5s;
+           }
+           #skewed:hover {
+               transform: skew(40deg) rotate(40deg);
+               background-color: red;
+               transition: skew(40deg) rotate(40deg) 5s, background-color 5s;
+           }
+            
+        </style>
+    </head>
+    <body>
+       <div class="boxes" id="box"><h2>Box</h2></div>
+       <div class="boxes" id="translate"><h2>I am translated and animated</h2></div>
+       <div class="boxes" id="rotate"><h2>I am rotated</h2></div>
+       <div class="boxes" id="scaled"><h2>I am scaled</h2></div>
+       <div class="boxes" id="skewed"><h2>I am skewed</h2></div>
+       <footer>box</footer>
+      
+    </body>
+</html>
